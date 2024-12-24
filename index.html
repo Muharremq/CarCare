@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CarCare+</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <nav>
-      <div class="logo">CarCare+</div>
-      <ul>
+      <ul class="navbar">
         <li><a href="#about">About</a></li>
         <li><a href="#reports">Reports</a></li>
         <li><a href="#team">Team</a></li>
@@ -19,79 +19,58 @@
   </header>
 
   <main>
-    <section id="about">
+    <section id="about" class="content-section">
       <h2>About</h2>
-      <p>
-        The CarCare+ mobile application is designed to help car owners manage the maintenance and servicing of their vehicles. It offers features such as maintenance reminders, mileage tracking, and scheduling service appointments to ensure vehicle health and longevity.
-      </p>
+      <p>The CarCare+ mobile application helps car owners manage their vehicle maintenance. It provides reminders for tasks such as oil changes, tire pressure checks, mileage tracking, and tax payments. The app also features product lists and scheduling options to keep vehicles in optimal condition.</p>
     </section>
 
-    <section id="reports">
+    <section id="reports" class="content-section">
+      <h2>Reports</h2>
       <div class="report-container">
-        <a href="https://raw.githubusercontent.com/Muharremq/CarCarePlus/main/CarCarePlus/src/pages/reports/Reports/Project%20Proposal%20Report.pdf" target="_blank">
-          <div class="report-card">
-            <img src="https://raw.githubusercontent.com/Muharremq/CarCarePlus/main/CarCarePlus/src/images/TEDU.LOGO.png" alt="TEDU Logo" />
-            <p>Project Proposal Report</p>
-          </div>
+        <a href="https://raw.githubusercontent.com/Muharremq/CarCarePlus-WebPage/master/Project%20Proposal%20Report.pdf" target="_blank" class="report-card">
+          <p>Project Proposal Report</p>
         </a>
-        <a href="https://raw.githubusercontent.com/Muharremq/CarCarePlus/main/CarCarePlus/src/pages/reports/Reports/Project%20Specifications%20Report.pdf" target="_blank">
-          <div class="report-card">
-            <img src="https://raw.githubusercontent.com/Muharremq/CarCarePlus/main/CarCarePlus/src/images/TEDU.LOGO.png" alt="TEDU Logo" />
-            <p>Project Specifications Report</p>
-          </div>
+        <a href="https://raw.githubusercontent.com/Muharremq/CarCarePlus-WebPage/master/Project%20Specifications%20Report.pdf" target="_blank" class="report-card">
+          <p>Project Specifications Report</p>
         </a>
-        <a href="https://raw.githubusercontent.com/Muharremq/CarCarePlus/main/CarCarePlus/src/pages/reports/Reports/Project%20Analysis%20Report.pdf" target="_blank">
-          <div class="report-card">
-            <img src="https://raw.githubusercontent.com/Muharremq/CarCarePlus/main/CarCarePlus/src/images/TEDU.LOGO.png" alt="TEDU Logo" />
-            <p>Project Analysis Report</p>
-          </div>
+        <a href="https://raw.githubusercontent.com/Muharremq/CarCarePlus-WebPage/master/Project%20Analysis%20Report.pdf" target="_blank" class="report-card">
+          <p>Project Analysis Report</p>
         </a>
-        <a href="assets/reports/final-report.pdf" target="_blank">
-          <div class="report-card">
-            <img src="https://raw.githubusercontent.com/Muharremq/CarCarePlus/main/CarCarePlus/src/images/TEDU.LOGO.png" alt="TEDU Logo" />
-            <p>Project High Level Design Report</p>
-          </div>
+        <a href="assets/reports/final-report.pdf" target="_blank" class="report-card">
+          <p>High-Level Design Report</p>
         </a>
       </div>
-      
     </section>
 
-    <section id="team">
-      <div class="team-section">
-        <h1>Our Team</h1>
-        <hr />
-        <div class="team-container">
-          <div class="team-member">
-            <i class="icon crown"></i>
-            <h2>Team Members</h2>
-            <ul>
-              <li>Ozan Muharrem ŞAHİN</li>
-              <li>Emre DUZCU</li>
-              <li>Anıl AYDEMİR</li>
-              <li>Yağız ÇAKIR</li>
-            </ul>
-          </div>
-          <div class="team-member">
-            <i class="icon king"></i>
-            <h2>Supervisor</h2>
-            <p>Venera ADANOVA</p>
-          </div>
-          <div class="team-member">
-            <i class="icon castle"></i>
-            <h2>Jury Members</h2>
-            <ul>
-              <li>Fırat AKBA</li>
-              <li>Eren ULU</li>
-            </ul>
-          </div>
+    <section id="team" class="content-section">
+      <h2>Our Team</h2>
+      <div class="team-container">
+        <div class="team-member">
+          <h3>Team Members</h3>
+          <ul>
+            <li>Ozan Muharrem ŞAHİN</li>
+            <li>Emre DUZCU</li>
+            <li>Anıl AYDEMİR</li>
+            <li>Yağız ÇAKIR</li>
+          </ul>
+        </div>
+        <div class="team-member">
+          <h3>Supervisor</h3>
+          <p>Venera ADANOVA</p>
+        </div>
+        <div class="team-member">
+          <h3>Jury Members</h3>
+          <ul>
+            <li>Fırat AKBA</li>
+            <li>Eren ULU</li>
+          </ul>
         </div>
       </div>
-      
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2024 CarCare+</p>
+    <p>&copy; 2024 CarCare+ | All Rights Reserved</p>
   </footer>
 </body>
 </html>
