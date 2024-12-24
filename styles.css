@@ -119,9 +119,9 @@ footer {
   color: #4f4f4f;
 }
 .team-member img {
-  width: 50px; 
-  height: auto; 
-  margin-bottom: 10px; 
+  width: 50px; /* Resmi 50px genişliğinde ayarladık */
+  height: auto; /* Yükseklik oranını koruyarak genişlik ayarladık */
+  margin-bottom: 10px; /* Resim ile yazı arasına boşluk ekledik */
 }
 
 .team-container {
@@ -134,7 +134,7 @@ footer {
 .team-member {
   flex: 1;
   min-width: 200px;
-  background: #dcdcdc;
+  background: #f9f9f9;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
