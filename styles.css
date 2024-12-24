@@ -118,3 +118,25 @@ footer {
   font-size: 1.2rem;
   color: #4f4f4f;
 }
+.team-member img {
+  width: 50px; 
+  height: auto; 
+  margin-bottom: 10px; 
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-member {
+  flex: 1;
+  min-width: 200px;
+  background: #dcdcdc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
