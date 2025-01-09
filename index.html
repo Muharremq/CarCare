@@ -5,67 +5,264 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CarCare+</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-decoration: none;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar .nav-links a {
+      color: white;
+      font-size: 1.2rem;
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #ddd;
+    }
+
+    #hero {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: url('https://github.com/Muharremq/CarCare/blob/main/images/car_1.jpg?raw=true') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      padding-top: 60px; /* Navbar için boşluk bırak */
+    }
+
+    #hero h1 {
+      font-size: 4rem;
+      font-family: 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+
+    #hero p {
+      font-size: 1.5rem;
+      font-family: Helvetica, Arial, sans-serif;
+      margin-bottom: 1rem;
+    }
+
+    .hero-button {
+      background-color: #fff;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .hero-button:hover {
+      background-color: #ddd;
+      color: #000;
+    }
+
+    #about {
+      background-color: #e8e8e8; /* İkinci resimdeki beyaza benzer renk */
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #about h2 {
+      font-size: 2.5rem;
+      font-family: 'Arial Black', Arial, sans-serif; /* Daha kalın font */
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: justify;
+    }
+
+    .about-button {
+      display: inline-block;
+      background-color: #002244;
+      color: white;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 30px; /* Düğme şeklini güncelle */
+      text-decoration: none;
+      font-size: 1rem;
+      text-transform: uppercase;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+    }
+
+    .about-button:hover {
+      background-color: #0055a5;
+    }
+
+    #reports {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+
+    #reports h2 {
+      font-size: 2rem;
+      font-family: 'Arial Black', Arial, sans-serif;
+      color: black;
+      margin-bottom: 30px;
+    }
+
+    .report-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .report-card {
+      background-color: #e8e8e8;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .report-card img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .report-card p {
+      font-size: 1rem;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 15px;
+    }
+
+    .report-button {
+      display: inline-block;
+      background-color: #002244;
+      color: rgb(219, 213, 213); /* Yazı rengini beyaz yaptım */
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+      text-transform: uppercase;
+      transition: background-color 0.3s;
+    }
+
+    .report-button:hover {
+      background-color: #0055a5;
+    }
+
+    .team-button {
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <div id="hero">
-    <div class="hero-content">
-      <h1>CarCare+</h1>
-      <a>---------</a>
-      <p class=" hero-text" >We care about your car!</p>
-      <a href="#about" class="hero-button">Find Out More</a>
+  <div class="navbar">
+    <a href="#" class="logo">CarCare+</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#reports">Reports</a>
+      <a href="#team">Team</a>
     </div>
   </div>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#reports">Reports</a></li>
-      <li><a href="#team">Team</a></li>
-    </ul>
-  </nav>
+  <div id="hero">
+    <h1>CarCare+</h1>
+    <p>We care about your car!</p>
+    <a href="#about" class="hero-button">Find Out More</a>
+  </div>
 
   <section id="about">
-    <div class="about-content">
-      <h2>About Us</h2>
-      <p>
-        At CarCare+, we believe that taking care of your vehicle should be simple, efficient, and stress-free. Our innovative app is designed to help car owners stay on top of their vehicle's health and maintenance needs, ensuring safety and performance at every mile.
-      </p>
-      <p>
-        From real-time mileage tracking to tire pressure monitoring, CarCare+ offers a comprehensive suite of tools tailored to meet the unique needs of car enthusiasts and everyday drivers alike. Our smart notification system ensures that you never miss an important payment, inspection, or service appointment, giving you peace of mind and more time to focus on what matters most.
-      </p>
-      <p>
-        With a user-friendly interface and cutting-edge features, CarCare+ isn't just an app—it's your car's best friend. Whether you’re scheduling your next inspection, shopping for vehicle accessories, or analyzing detailed reports and statistics, CarCare+ empowers you to make informed decisions about your vehicle with ease.
-      </p>
-      <p>
-        Join thousands of car owners who trust CarCare+ to keep their vehicles running smoothly. Because at CarCare+, we don’t just care for your car; we care for you.
-      </p>
-      <a href="#reports" class="about-button">LET'S SEE!</a>
-    </div>
+    <h2>About Us</h2>
+    <p>
+      At CarCare+, we believe that taking care of your vehicle should be simple, efficient, and stress-free. Our innovative app is designed to help car owners stay on top of their vehicle's health and maintenance needs, ensuring safety and performance at every mile.
+    </p>
+    <p>
+      From real-time mileage tracking to tire pressure monitoring, CarCare+ offers a comprehensive suite of tools tailored to meet the unique needs of car enthusiasts and everyday drivers alike. Our smart notification system ensures that you never miss an important payment, inspection, or service appointment, giving you peace of mind and more time to focus on what matters most.
+    </p>
+    <p>
+      Join thousands of car owners who trust CarCare+ to keep their vehicles running smoothly. Because at CarCare+, we don’t just care for your car; we care for you.
+    </p>
+    <a href="#reports" class="about-button">LET'S SEE!</a>
   </section>
-  
 
-  <section id="reports" class="content-section">
+  <section id="reports">
     <h2>Reports</h2>
     <div class="report-container">
-      <a href="https://raw.githubusercontent.com/Muharremq/CarCare/main/reports/Project%20Proposal%20Report.pdf" target="_blank" class="report-card">
-        <img src="https://raw.githubusercontent.com/Muharremq/CarCare/main/images/TEDU.LOGO.png" alt="TEDU Logo" />
+      <div class="report-card">
+        <img src="https://raw.githubusercontent.com/Muharremq/CarCare/main/images/TEDU.LOGO.png" alt="TEDU Logo">
         <p>Project Proposal Report</p>
-      </a>
-      <a href="https://raw.githubusercontent.com/Muharremq/CarCare/main/reports/Project%20Specifications%20Report.pdf" target="_blank" class="report-card">
-        <img src="https://raw.githubusercontent.com/Muharremq/CarCare/main/images/TEDU.LOGO.png" alt="TEDU Logo" />
-        <p>Project Specifications Report</p>
-      </a>
-      <a href="https://raw.githubusercontent.com/Muharremq/CarCare/main/reports/Project%20Analysis%20Report.pdf" target="_blank" class="report-card">
-        <img src="https://raw.githubusercontent.com/Muharremq/CarCare/main/images/TEDU.LOGO.png" alt="TEDU Logo" />
+        <a href="https://raw.githubusercontent.com/Muharremq/CarCare/main/reports/Project%20Proposal%20Report.pdf" target="_blank" class="report-button">Download PDF</a>
+      </div>
+      <div class="report-card">
+        <img src="https://raw.githubusercontent.com/Muharremq/CarCare/main/images/TEDU.LOGO.png" alt="TEDU Logo">
+        <p>Project Specification Report</p>
+        <a href="https://raw.githubusercontent.com/Muharremq/CarCare/main/reports/Project%20Specifications%20Report.pdf" target="_blank" class="report-button">Download PDF</a>
+      </div>
+      <div class="report-card">
+        <img src="https://raw.githubusercontent.com/Muharremq/CarCare/main/images/TEDU.LOGO.png" alt="TEDU Logo">
         <p>Project Analysis Report</p>
-      </a>
-      <a href="assets/reports/final-report.pdf" target="_blank" class="report-card">
-        <img src="https://raw.githubusercontent.com/Muharremq/CarCare/main/images/TEDU.LOGO.png" alt="TEDU Logo" />
-        <p>High-Level Design Report</p>
-      </a>
+        <a href="https://raw.githubusercontent.com/Muharremq/CarCare/main/reports/Project%20Analysis%20Report.pdf" target="_blank" class="report-button">Download PDF</a>
+      </div>
+      <div class="report-card">
+        <img src="https://raw.githubusercontent.com/Muharremq/CarCare/main/images/TEDU.LOGO.png" alt="TEDU Logo">
+        <p>High Level Design Report</p>
+        <a href="https://raw.githubusercontent.com/Muharremq/CarCare/main/reports/Project%20Specifications%20Report.pdf" target="_blank" class="report-button">Download PDF</a>
+      </div>
     </div>
-    <a href="#team" class="report-button">LET'S SEE ABOUT OUT TEAM!</a>
-
+    <a href="#team" class="report-button team-button">LET'S SEE ABOUT OUT TEAM!</a>
   </section>
 
   <section id="team" class="content-section">
@@ -96,5 +293,17 @@
       </div>
     </div>
   </section>
+
+  <script>
+    // Yumuşak kaydırma için event listener ekleniyor
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Varsayılan tıklama davranışını engelle
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth' // Yumuşak kaydırmayı etkinleştir
+        });
+      });
+    });
+  </script>
 </body>
 </html>
