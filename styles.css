@@ -245,3 +245,80 @@ h1, h2 {
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+#team h2 {
+  font-size: 2rem; /* Başlık boyutu */
+  font-family: 'Arial Black', Arial, sans-serif; /* Kalın font */
+  color: #333; /* Renk */
+  margin-bottom: 30px; /* Alt boşluk */
+}
+
+
+
+table {
+  width: 65%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #fff;
+}
+th, td {
+  border: 1px solid #333;
+  padding: 8px;
+}
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+.high-priority {
+  background-color: #9aa9f0; 
+}
+.medium-priority {
+  background-color: #ffffff; 
+}
+
+/* Tab Styles */
+.tab-container {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.tab-link {
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  border: none; /* Kenarlık kaldırıldı */
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 25px; /* Tam köşesiz görünüm */
+  font-size: 16px; /* Yazı boyutu */
+  font-weight: 500; /* Yazıyı biraz kalın yap */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+  transition: all 0.3s ease; /* Geçiş efektleri */
+}
+
+.tab-link:hover {
+  background-color: #e0e0e0; /* Hover sırasında arka plan rengi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hover sırasında gölge */
+}
+
+.tab-link.active {
+  background-color: #002244; /* Aktif sekme arka planı */
+  color: white; /* Aktif sekme yazı rengi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Aktif sekme gölgesi */
+  transform: scale(1.05); /* Hafif büyüme efekti */
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
